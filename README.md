@@ -1,4 +1,4 @@
-# MemoryManager
+# Memory Manager
 A custom memory manager designed specifically for game engines. It's architecture consists of three Fixed Size Allocators and a Heap Manager. This project also includes a comprehensive Unit Test to test allocations done by the Memory System as a cohesive unit.
 
 The Fixed Size Allocators get memory from the Heap Manager but manage it independently. They use a BitArray class to do so, which is basically to be treated as an array of bits, indicating the blocks available for allocation within the allocator. This class also provides methods to set the bits and to find the first set bit. Using BitArrays is beneficial because it allows for all allocations and frees to be done in O(1), giving a performance boost which game engines strive for. 
